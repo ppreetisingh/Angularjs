@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angularjs</title>
+	<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var mod=angular.module("Myapp" ,[]);
+		mod.controller("Myctrl", function($scope){
+
+		});
+	</script>
+</head>
+<body ng-app="Myapp" ng-controller="Myctrl" class="container">
+<form role="form">
+		<fieldset>
+				
+				<div class="form-group">
+					<label for="name" class="col-sm-2">Name</label>
+					<div class="form-group col-sm-10">
+						<input type="text" name="name" id="name" class="form-control" required placeholder="Name" ng-model="name">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-sm-2">Email</label>
+					<div class="form-group col-sm-10">
+						<input type="text" name="email" id="email" class="form-control" placeholder="Email" ng-model="email">
+					</div>
+				</div>
+		</fieldset>
+	</form>
+	<div class="container table-responsive table-striped table-bordered">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td ng-bind="name"></td>
+					<td ng-bind="email"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
